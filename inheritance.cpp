@@ -77,8 +77,19 @@ class CookingYoutubeChannel : public YoutubeChannel // we can access all public 
         // we cannot access any other private members except public and protected.
     }
 };
+
 int main() 
 {
-    CookingYoutubeChannel *yt = new CookingYoutubeChannel("channel","pavan");
-    yt->info();
+    CookingYoutubeChannel *cyt1 = new CookingYoutubeChannel("t-series","pavan");
+    cyt1->info();
+    /*
+    In C++, a pointer to a base class can point to an object of a derived class, but not vice versa. This means that a pointer to a derived class cannot directly 
+    hold a reference to a base class object.
+    */
+    YoutubeChannel *yt = new CookingYoutubeChannel("aditya-cooking","vanitha"); // CORRECT 
+    CookingYoutubeChannel *cyt2 = new YoutubeChannel("meme-content","pavan"); // WRONG
+    /*
+    1) CookingYoutubeChannel object is a YoutubeChannel object. So a pointer of YoutubeChannel can point to the object of the CookingYoutubeChannel object.
+    2) YoutubeChannel object is NOT a CookingYoutubeChannel object. So a pointer of CookingYoutubeChannel CANNOT point to the object of the YoutubeChannel object.
+    */
 }
