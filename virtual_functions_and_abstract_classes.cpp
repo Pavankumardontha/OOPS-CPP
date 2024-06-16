@@ -72,4 +72,56 @@ int main()
 }
 
 
+/*-------------------------------------------------------------------------------------------------------------*/
+// PURE VIRTUAL FUNCTIONS 
+
+/*
+There might be a case where we do not want the base class to have the implementation of a function but enforce a 
+condition to implement the function in all its derived classes. So which ever class is inheriting from the base
+class, it should definitely implement its own implementation of the function. This is what is called pure virtual 
+function.There will be no implementation present in the base class. Implementation should be provided in the derived 
+class.
+
+An ABSTRACT CLASS is a class which has ATLEAST ONE pure virtual function. We cannot create instances of abstract classes 
+but we can create pointers of abstract classes and make them point to the objects of the derived classes.
+*/
+
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+
+class Vehicle
+{
+    public:
+    virtual void drive() = 0; // PURE VIRTUAL FUNCTION
+};
+
+class Car: public Vehicle
+{
+    public:
+    void drive() // THIS FUNCTION SHOULD BE IMPLEMENTED
+    {
+        cout<<"Driving car"<<endl;
+    }
+};
+
+class Bike: public Vehicle
+{
+    public:
+    void drive() // THIS FUNCTION SHOULD BE IMPLEMENTED
+    {
+        cout<<"Driving bike"<<endl;
+    }
+}
+
+int main()
+{
+    Vehicle *v1 = new Car(); // NOTE: abstract class reference/pointer is pointing to car object.
+    Vehicle *v2 = new Bike(); // NOTE: abstract class reference/pointer is pointing to a bike object.
+    v1->drive(); // OUTPUT : Driving car
+    v2->drive(); //OUTPUT : Driving bike
+}
+
+
+
 
