@@ -5,7 +5,7 @@ using a parent class, it should be able to use any child class without knowing t
 
 Formal Definition
 If S is a subtype of T, then objects of type T may be replaced with objects of type S.
-Objects of type may substitute objects of type T without altering any of the desirable 
+Objects of type S may substitute objects of type T without altering any of the desirable 
 properties of the program (correctness, task performed, etc.).
 */
 
