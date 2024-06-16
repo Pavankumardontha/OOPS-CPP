@@ -2,6 +2,9 @@
 Use of protected keyword : variables or functions declared under protected access modifier can 
 be accessed from the child classes as well.
 -> inheritance syntax declaration
+-> inheritance is "IS A" relationship.
+-> composition is "HAS A" relationship. Composition is more preferred than inheritance. We have some problems coming from inheritance
+which does not arise in composition
 */
 
 #include <bits/stdc++.h>
@@ -95,3 +98,16 @@ int main()
     object of the YoutubeChannel object.
     */
 }
+/*
+1. Single Inheritance: In single inheritance, a class is allowed to inherit from only one class. i.e. one subclass is inherited by one base class only.
+2. Multiple Inheritance: Multiple Inheritance is a feature of C++ where a class can inherit from more than one class. i.e one subclass is inherited 
+from more than one base class.
+3. Multilevel Inheritance: In this type of inheritance, a derived class is created from another derived class. 
+4. Hierarchical Inheritance: In this type of inheritance, more than one subclass is inherited from a single base class. i.e. more than one derived class 
+is created from a single base class.
+5. Hybrid (Virtual) Inheritance: Hybrid Inheritance is implemented by combining more than one type of inheritance. For example: Combining Hierarchical
+inheritance and Multiple Inheritance. 
+*/
+
+
+
