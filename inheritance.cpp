@@ -3,9 +3,59 @@ Use of protected keyword : variables or functions declared under protected acces
 be accessed from the child classes as well.
 -> inheritance syntax declaration
 -> inheritance is "IS A" relationship.
--> composition is "HAS A" relationship. Composition is more preferred than inheritance. We have some problems coming from inheritance
-which does not arise in composition
+
+-> Association : It is a relationship between two classes where one class “HAS A” relationship with the other class. 
+In other words, an instance of one class has an instance of the other class as a member.
+Types of association : Aggregation and composition
+
+-> Aggregation : In C++, aggregation is a special type of association between classes that represents a weaker relationship than a composition. In an aggregation relationship, 
+one class is a container for objects of another class, but it is not responsible for the creation or destruction of those objects.This relationship is often referred to as a 
+“has-a” relationship, because one class has objects of another class as members.
+An aggregation relationship is represented in C++ as an object of one class containing pointers to objects of another class. The contained objects are said to be part of 
+the containing object, but they can exist independently of the containing object. If the containing object is destroyed, the contained objects are not automatically destroyed 
+along with it.
 */
+
+/* AGGREGATION EXAMPLE : For example, consider a class Department and a class Employee. If a department "has many" employees, we can say that there is an aggregation relationship 
+between the two classes. We can implement this aggregation relationship in C++ as follows: */
+class Employee {
+  // Class members and methods
+};
+
+class Department {
+  std::vector<Employee*> employees;
+  // Class members and methods
+};
+/*
+The contained objects employees can exist independently of the containing object Department, and if the Department object is destroyed, the Employee objects are not automatically
+destroyed along with it.
+*/
+
+/*
+-> Composition : In C++, composition is a special type of association between classes that represents a stronger relationship than a regular association. In a composition 
+relationship, one class is the owner of the other class and is responsible for its creation and destruction. This relationship is often referred to as a “has-a” relationship, 
+because one class has an instance of another class as a member.
+A composition relationship is represented in C++ as an object of one class being contained within another class. The contained object is said to be a part of the containing object,
+and it cannot exist independently of the containing object. If the containing object is destroyed, the contained object is automatically destroyed along with it.
+
+example : For example, consider a class Car and a class Engine. If a car "has an" engine, we can say that there is a composition relationship between the two classes. 
+We can implement this composition relationship in C++ as follows:
+*/
+
+class Engine {
+  // Class members and methods
+};
+
+class Car {
+  Engine engine;
+  // Class members and methods
+};
+
+/*
+In this example, an instance of the Engine class is contained within an instance of the Car class, representing the composition relationship between the two classes. 
+The contained object engine cannot exist independently of the containing object Car, and if the Car object is destroyed, the Engine object is automatically destroyed along with it.
+*/
+
 
 #include <bits/stdc++.h>
 #include <iostream>
