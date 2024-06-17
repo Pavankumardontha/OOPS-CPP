@@ -40,10 +40,14 @@ class NotificationService // HIGH LEVEL MODULE
     }
 };
 
-/* Now lets say if a new service like SMSService comes then we need to change the high
+/* 
+Now lets say if a new service like SMSService comes then we need to change the high
 level module also to accomodate this change. So there is high coupling between the low 
 level modules and the high level module. An addition of new low level module is also 
-accounting to changes in the high level module which is not desirable.*/ 
+accounting to changes in the high level module which is not desirable. Ofcourse we are not 
+following dependency inversion principle but also not following Open-closed principle too. 
+Since we are modifying the high level module (NotificationService class) and not extending it !! 
+*/ 
 
 class SMSService // NEW LOW LEVEL MODULE
 {
