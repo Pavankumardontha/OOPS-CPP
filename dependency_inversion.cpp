@@ -60,7 +60,10 @@ class SMSService // NEW LOW LEVEL MODULE
 
 /*--------------------------------------------------------------------------------------------------------------*/
 
-/* Now lets modify our code to decouple both the low level modules(EmailService and SMSService) and high level module(NotificationService) using abstract classes/interfaces. */
+/* 
+Now lets modify our code to decouple both the low level modules(EmailService and SMSService) and high level 
+module(NotificationService) using abstract classes/interfaces. 
+*/
 // FOLLOWING DIP
 class NotificationServiceProvider
 {
@@ -127,8 +130,10 @@ thus decoupled between themselves.
 ADVANTAGES OF DIP: 
 Decoupling: We decouple high-level modules from low-level modules using intermediate interfaces/abstract classes.
 Whenever a new low level module comes , we need not edit the high level module.
-Maintainability: Changes in low-level modules do not affect high-level modules if they only interact through abstractions. This makes the system easier to maintain.
-Testability: High-level modules can be tested independently from their concrete implementations, as they depend on abstractions.
+Maintainability: Changes in low-level modules do not affect high-level modules if they only interact through 
+abstractions. This makes the system easier to maintain.
+Testability: High-level modules can be tested independently from their concrete implementations, as they depend 
+on abstractions.
 */
 
 
