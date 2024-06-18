@@ -168,6 +168,10 @@ be the owners to some other restaurants also. So this is a aggregation relations
 Imagine you have a user class and an address class. One user object can have multiple address objects. If we delete the user object, the corresponding address 
 objects associated with that user object will have no use and thus the address objects cannot exist without the user object. This is composition relationship.
 
+THINKING POINT : 
+One point of looking the restaurant and owner relationship is : A restaurant object has many owner objects. 
+The second view point of looking at this is : An owner object might have many restaurant objects.
+How to design depends on the use cases.
 */
 
 
