@@ -159,5 +159,16 @@ is created from a single base class.
 inheritance and Multiple Inheritance. 
 */
 
+/*
+EXAMPLES OF AGGREGATION AND COMPOSITION: 
+Imagine swiggy use case. Each restaurant can have multiple owners. Each owner can be the owner of multiple restaurants. There is a many to many relationship
+between the owner and the restaurant. So if we delete the restautant object, we will not automatically delete the corresponding owner objects since they might
+be the owners to some other restaurants also. So this is a aggregation relationship between the the restaurant and owner. 
+
+Imagine you have a user class and an address class. One user object can have multiple address objects. If we delete the user object, the corresponding address 
+objects associated with that user object will have no use and thus the address objects cannot exist without the user object. This is composition relationship.
+
+*/
+
 
 
