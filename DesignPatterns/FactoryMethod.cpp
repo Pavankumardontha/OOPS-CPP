@@ -88,4 +88,6 @@ an additonal Factory.Writing unit test cases is easy with Factory Method Pattern
 comparison to Simple Factory Pattern since switch case (or long if else blocks) is not used.
 To support additional products, we do not modify existing code but just add one new Factory 
 class, so no need to re-run existing old unit tests.
+
+ref : https://www.codeproject.com/Articles/1135918/Factory-Patterns-Factory-Method-Pattern
 */
