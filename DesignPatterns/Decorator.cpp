@@ -47,17 +47,23 @@ class TandoriBurger: public IBurger
     }
 };
 
-class IBurgerToppling: public IBurger // VERY IMPORTANT (The Toppling Interfact inherits from the Burger Interface since it should return a burger object)
+class IBurgerToppling: public IBurger // VERY IMPORTANT (The Toppling abstract class inherits from the Burger Interface since it should return a burger object)
 {
+    // this is an abstract class and not an interface
+    protected: 
+    IBurger* burger;
+    IBurgerToppling(IBurger* burger):IBurger()
+    {
+        this->burger = burger;
+    }
 };
 
 class CheeseToppling : public IBurgerToppling
 {
-    IBurger* burger;
     public:
-    CheeseToppling(IBurger* burger):IBurgerToppling()
+    CheeseToppling(IBurger* burger):IBurgerToppling(burger)
     {
-        this->burger = burger;
+        
     }
     
     string getDescription()
@@ -74,11 +80,10 @@ class CheeseToppling : public IBurgerToppling
 
 class MayoToppling : public IBurgerToppling
 {
-    IBurger* burger;
     public:
-    MayoToppling(IBurger* burger):IBurgerToppling()
+    MayoToppling(IBurger* burger):IBurgerToppling(burger)
     {
-        this->burger = burger;
+        
     }
     
     string getDescription()
