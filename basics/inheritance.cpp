@@ -8,13 +8,31 @@ be accessed from the child classes as well.
 In other words, an instance of one class has an instance of the other class as a member.
 Types of association : Aggregation and composition
 
--> Aggregation : In C++, aggregation is a special type of association between classes that represents a weaker relationship than a composition. In an aggregation relationship, 
-one class is a container for objects of another class, but it is not responsible for the creation or destruction of those objects.This relationship is often referred to as a 
-“has-a” relationship, because one class has objects of another class as members.
-An aggregation relationship is represented in C++ as an object of one class containing pointers to objects of another class. The contained objects are said to be part of 
+-> Aggregation : Aggregation is a special type of association between classes that represents a weaker relationship than a composition. In an aggregation relationship, 
+one class is a container for objects of another class, but it is not responsible for the creation or destruction of those objects. Once the container class object is 
+destroyed the objects of the class it contains will NOT be destroyed automatically. They can exist independently without being associated with any container object. 
+
+Lets take an example. A single Library object will have multiple book objects. Here library is the container object. Once the library is destroyed , the books inside it 
+can stay independently without being attached to any library also. So the relationship between them is Aggregation.
+
+An aggregation relationship is represented as an object of one class containing pointers to objects of another class. The contained objects are said to be part of 
 the containing object, but they can exist independently of the containing object. If the containing object is destroyed, the contained objects are not automatically destroyed 
 along with it.
+
+
+--> Composition: Composition is a special type of association between classes that represents a stronger relationship than a regular association. In a composition 
+relationship, one class is the owner of the other class and is responsible for its creation and destruction.
+
+Example : A human object has a heart object. Heart object cannot stay without a human object and the human object cannot be created without a heart object. If we destroy
+the human object , the heart object attached to it also gets destroyed.
+
+A composition relationship is represented as an object of one class being contained within another class. The contained object is said to be a part of the containing object,
+and it cannot exist independently of the containing object. If the containing object is destroyed, the contained object is automatically destroyed along with it.
+
 */
+
+
+
 
 /* AGGREGATION EXAMPLE : For example, consider a class Department and a class Employee. If a department "has many" employees, we can say that there is an aggregation relationship 
 between the two classes. We can implement this aggregation relationship in C++ as follows: */
