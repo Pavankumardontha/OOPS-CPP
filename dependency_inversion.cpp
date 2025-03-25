@@ -1,8 +1,6 @@
 /*
-Dependency inversion principle: It states that high level modules should not directly 
-depend on low level modules. Both should depend on abstractions/interfaces.
-Abstract classes and interfaces will help in decoupling the high level module from low 
-level modules. Low level modules act as utility classes for supporting high level module.
+Dependency inversion principle: It states that high level modules should not directly depend on low level modules. Both should depend on abstractions/interfaces.
+Abstract classes and interfaces will help in decoupling the high level module from low level modules. Low level modules act as utility classes for supporting high level module.
 */
 
 /*
