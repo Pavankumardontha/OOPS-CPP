@@ -2,29 +2,19 @@
 #include <iostream>
 using namespace std;
 /*
-Data Hiding: Encapsulation allows you to hide the implementation details of a class from the 
-outside world. By making certain members private, you restrict access to them from outside the 
-class, preventing direct modification and ensuring that the data remains in a valid state.
-
-Encapsulation in C++ is defined as the wrapping up of data and information in a single unit.It 
-is defined as binding together the data and the functions that manipulate them.
-
-Consider a real-life example of encapsulation, in a company, there are different sections like 
-the accounts section, finance section, sales section, etc. 
-Now,The finance section handles all the financial transactions and keeps records of all the data 
-related to finance.Similarly, the sales section handles all the sales-related activities and 
-keeps records of all the sales.Now there may arise a situation when for some reason an official 
-from the finance section needs all the data about sales in a particular month.
-
-In this case, he is not allowed to directly access the data of the sales section. He will first 
-have to contact some other officer in the sales section and then request him to give the 
-particular data.
-
+Encapsulation is the concept of bundling data (variables) and methods (functions) that operate on that data into a single unit (class) and restricting direct 
+access to some details of the object to enforce data hiding.By making certain members private, you restrict access to them from outside the class, preventing direct 
+modification and ensuring that the data of an object remains in a valid state.
+Imagine you have a car class with has max_speed has one of the data member. If we expose this data variable to public , someone might change the max_speed variable of a 
+car object to -90. But generally , a car object cannot have a negative max_speed making the object state INVALID. So to avoid these situations , we make the data variables
+private and unaccessible to the outside world directly. Instead we use getter methods and setter methods to provide access to the data variables to the outer world.
+We can write some validations inside the setter methods to make sure that the object state is not made INVALID by setting the data variables to absurd and non-realistic values.
 */
 
 class YoutubeChannel
 {
     // by default all are private
+private:
     string name;
     string owner_name;
     int subscribers;
@@ -46,14 +36,25 @@ class YoutubeChannel
     {
         return owner_name;
     }
-    
+
+    void set_subscribers(int new_subscribers)
+    {
+        // add validation to check the new_subscribers count is NOT negative
+        if(new_subcribers >= 0)
+            subscribers = new_subscribers
+    }
+
     void set_name(string new_name)
     {
+        // add validation to make sure name is not set to empty 
+        if(new_name != "")
         name = new_name;
     }
     
     void set_owner_name(string new_owner_name)
     {
+        // add validation to make sure owner_name is not set to empty
+        if(new_owner_name != "")
         owner_name = new_owner_name;
     }
     
@@ -67,7 +68,6 @@ class YoutubeChannel
         if(subscribers>0)
         subscribers--;
     }
-    
     
     void info()
     {
