@@ -1,4 +1,4 @@
-
+/*
 When to use interface and when to use abstract class 
 1) We can use both a reference to an interface or an abstract class to enable 
 polymorphism. 
@@ -138,3 +138,4 @@ The 'is a' relationship also holds true when a class implements an interface.
  
 
 refer page 224 - head first java 2nd edition
+*/
