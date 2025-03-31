@@ -136,6 +136,6 @@ class Dog : public Animal , public Ipet
 Dog "is a" Animal and dog "is a" pet since it implements pet behaviour.
 The 'is a' relationship also holds true when a class implements an interface.
  
-
+-> Refer compile time polymorphism and run time polymorphism. Also how function calls are being made to the subclasses using a reference to an abstract class.
 refer page 224 - head first java 2nd edition
 */
