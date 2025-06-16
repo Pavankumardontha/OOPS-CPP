@@ -122,6 +122,58 @@ int main()
     v2->drive(); //OUTPUT : Driving bike
 }
 
+/*-----------------------------------------------------------------------------*/
+// final conclusion
+class Car
+{
+public:
+	void accelerate()
+	{
+		/*
+		this will execute even if we have the same method in the
+		child class also
+		*/
+		cout<<"accelerating car"<<endl;
+	}
+	virtual void drive()
+	{
+		/*
+		if this method is overiden in the child class ,
+		then the overriden method in the child class will be 
+		executed
+		*/ 
+		cout<<"Driving car"<<endl;
+	}
+	virtual void stop()=0; // this should be implemented by child class so child class method will be executed when called
+};
+
+class Alto : public Car
+{
+public:
+	void accelerate()
+	{
+		cout<<"accelerating Alto"<<endl;
+	}
+	void drive()
+	{
+		cout<<"Driving Alto"<<endl;
+	}
+	void stop()
+	{
+		cout<<"Stopping Alto"<<endl;
+	}
+};
+
+
+
+int main()
+{
+	Car* c1 = new Alto();
+	c1->accelerate(); // accelerate method of car
+	c1->drive(); // drive method of alto
+	c1->stop(); // stop method of alto
+}
+
 
 
 
