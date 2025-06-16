@@ -154,8 +154,9 @@ int main()
     CookingYoutubeChannel *cyt1 = new CookingYoutubeChannel("t-series","pavan");
     cyt1->info();
     /*
-    In C++, a pointer to a base class can point to an object of a derived class, but not vice versa. This means that a pointer
-    to a derived class cannot directly hold a reference to a base class object.
+    In C++, a pointer/reference of a base class can hold an object of the derived class, but not vice versa. This means that a pointer/reference
+    of the derived class cannot directly hold an object of base class object.
+    PARENT REFERENCE CAN HOLD CHILD CLASS OBJECT
     */
     YoutubeChannel *yt = new CookingYoutubeChannel("aditya-cooking","vanitha"); // CORRECT 
     CookingYoutubeChannel *cyt2 = new YoutubeChannel("meme-content","pavan"); // WRONG
