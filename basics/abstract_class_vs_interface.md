@@ -115,7 +115,7 @@ Which `func()` should `C` inherit? This ambiguity is the **Deadly Diamond of Dea
 ### Why Interfaces Avoid DDD
 
 Interfaces avoid DDD by:
-- Providing **only abstract methods**
+- Providing **only abstract methods** (this means you need to definitely implement the method in the child class)
 - Forcing concrete subclasses to implement those methods
 - Eliminating ambiguity at runtime
 
