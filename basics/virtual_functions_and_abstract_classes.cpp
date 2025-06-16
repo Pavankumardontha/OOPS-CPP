@@ -188,9 +188,9 @@ class Alto : public Car
 public:
 	void drive()
 	{
-		Car::drive();
+		Car::drive(); // NOTE SYNTAX
 		cout<<"Driving alto"<<endl;
-		Car::drive();
+		Car::drive(); // NOTE SYNTAX
 	}
 };
 
