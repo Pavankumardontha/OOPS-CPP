@@ -163,9 +163,6 @@ public:
 		cout<<"Stopping Alto"<<endl;
 	}
 };
-
-
-
 int main()
 {
 	Car* c1 = new Alto();
@@ -173,6 +170,64 @@ int main()
 	c1->drive(); // drive method of alto
 	c1->stop(); // stop method of alto
 }
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* HOW TO CALL A PARENT METHOD FROM A CHILD METHOD ?? */
+class Car
+{
+public:
+	virtual void drive() // this implies if a child implements this method, the child method will be executed when we call this
+	{
+		cout<<"drive car"<<endl;
+	} 
+};
+
+class Alto : public Car
+{
+public:
+	void drive()
+	{
+		Car::drive();
+		cout<<"Driving alto"<<endl;
+		Car::drive();
+	}
+};
+
+int main()
+{
+	Car* c1 = new Alto();
+	c1->drive();
+}
+
+/*
+output:
+drive car
+Driving alto
+drive car
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
