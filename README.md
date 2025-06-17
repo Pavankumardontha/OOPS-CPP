@@ -1,5 +1,8 @@
 # OOPS-CPP
-Missed :- Polymorphism (run-time and compile time) + Interface segregation principle 
+Missed :- 
+1) Polymorphism (run-time and compile time)
+2) Interface segregation principle.
+3) How to inherit from on abstract class and implement different interfaces. 
 
 
 Steps to run c++ code in sublime text:- 
